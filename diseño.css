@@ -80,3 +80,31 @@ footer p {
     text-align: center;
     letter-spacing: 3px;
 }
+.game-layout {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Separa los lados */
+    gap: 30px; /* Espacio entre texto e imagen */
+}
+
+.game-content {
+    flex: 1; /* Toma el espacio necesario */
+    text-align: left;
+}
+
+.game-image img {
+    max-width: 250px; /* Ajusta el tamaño según tu imagen */
+    height: auto;
+    border: 4px solid #000; /* Marco negro para la imagen también */
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 5px 5px 0px #000; /* Sombra sólida tipo cómic */
+}
+
+/* Ajuste para que los botones no se peguen */
+.button-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
