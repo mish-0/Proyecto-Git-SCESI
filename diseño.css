@@ -1,46 +1,82 @@
+/* Paleta de colores moderna y temática */
 body {
-    background-color: #222; 
-    color: #333;
-    font-family: 'Courier New', Courier, monospace; 
+    background-color: #f3f4f6; /* Gris muy claro para modernidad */
+    color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #cc0000;
+    background-color: #b91c1c; /* Rojo intenso elegante */
     width: 100%;
-    padding: 20px 0;
-    color: rgb(0, 0, 0);
-    border-bottom: 6px solid #333;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    padding: 40px 0;
+    color: white;
+    border-bottom: 8px solid #3b4cca; /* Línea azul Pokémon */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
+header h1 {
+    font-weight: 800; /* Negrita fuerte */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header p {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Modifica o añade estas reglas en tu archivo */
 
 #game-container {
-    background-color: #98cb98; 
-    border: 10px solid #555;
-    border-radius: 10px;
-    padding: 40px;
+    background-color: white;
+    padding: 50px;
     margin-top: 50px;
-    box-shadow: 10px 10px 0px #000;
+    border-radius: 20px;
+    /* Añadimos el marco negro grueso */
+    border: 5px solid #000; 
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
 }
+
 .button-group button {
-    background-color: #3b4cca; 
-    color: white;
-    border: 3px solid #2a3a9d;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
+    background-color: #ffcb05; 
+    color: #3b4cca;           
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 900;
     cursor: pointer;
-    margin: 10px;
-    transition: 0.2s;
+    margin: 15px;
+    border-radius: 10px;
+    /* Añadimos el marco negro al botón */
+    border: 4px solid #000;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-#yes-btn:hover {
-    background-color: #4caf50; /* Verde para SÍ */
+button:hover {
+    background-color: #3b4cca;
+    color: white;
+    /* Mantenemos el borde negro incluso en hover */
+    border-color: #000; 
+    transform: translateY(-3px);
+}
+/* Footer destacado para PokePibbles */
+footer {
+    margin-top: auto;
+    padding: 40px;
 }
 
-#no-btn:hover {
-    background-color: #f44336; /* Rojo para NO */
+footer p {
+    color: #1f2937;
+    font-weight: 900; /* Negrita máxima */
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
 }
