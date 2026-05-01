@@ -1,0 +1,110 @@
+/* Paleta de colores moderna y temática */
+body {
+    background-color: #f3f4f6; /* Gris muy claro para modernidad */
+    color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #b91c1c; /* Rojo intenso elegante */
+    width: 100%;
+    padding: 40px 0;
+    color: white;
+    border-bottom: 8px solid #3b4cca; /* Línea azul Pokémon */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-weight: 800; /* Negrita fuerte */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header p {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Modifica o añade estas reglas en tu archivo */
+
+#game-container {
+    background-color: white;
+    padding: 50px;
+    margin-top: 50px;
+    border-radius: 20px;
+    /* Añadimos el marco negro grueso */
+    border: 5px solid #000; 
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-group button {
+    background-color: #ffcb05; 
+    color: #3b4cca;           
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 10px;
+    /* Añadimos el marco negro al botón */
+    border: 4px solid #000;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #3b4cca;
+    color: white;
+    /* Mantenemos el borde negro incluso en hover */
+    border-color: #000; 
+    transform: translateY(-3px);
+}
+/* Footer destacado para PokePibbles */
+footer {
+    margin-top: auto;
+    padding: 40px;
+}
+
+footer p {
+    color: #1f2937;
+    font-weight: 900; /* Negrita máxima */
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.game-layout {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Separa los lados */
+    gap: 30px; /* Espacio entre texto e imagen */
+}
+
+.game-content {
+    flex: 1; /* Toma el espacio necesario */
+    text-align: left;
+}
+
+.game-image img {
+    max-width: 250px; /* Ajusta el tamaño según tu imagen */
+    height: auto;
+    border: 4px solid #000; /* Marco negro para la imagen también */
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 5px 5px 0px #000; /* Sombra sólida tipo cómic */
+}
+
+/* Ajuste para que los botones no se peguen */
+.button-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
