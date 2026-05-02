@@ -1660,3 +1660,91 @@ const pokedex = [
         legendario: true,
     },
 ];
+
+const preguntas = [
+    { texto: "¿Es legendario?", filtro: (p, r) => r ? p.legendario : !p.legendario },
+    
+    { texto: "¿Tiene alas?", filtro: (p, r) => r ? p.alas > 0 : p.alas === 0 },
+    { texto: "¿Tiene patas?", filtro: (p, r) => r ? p.patas > 0 : p.patas === 0 },
+    { texto: "¿Tiene 4 patas?", filtro: (p, r) => r ? p.patas === 4 : p.patas !== 4 },
+    
+    { texto: "¿Tiene evoluciones?", filtro: (p, r) => r ? p.numeroDeEvoluciones > 1 : p.numeroDeEvoluciones === 1 },
+    { texto: "¿Es la forma base?", filtro: (p, r) => r ? p.posLineaEvolutiva === 1 : p.posLineaEvolutiva !== 1 },
+    { texto: "¿Es la forma final?", filtro: (p, r) => r ? p.posLineaEvolutiva === p.numeroDeEvoluciones : p.posLineaEvolutiva !== p.numeroDeEvoluciones },
+    
+    { texto: "¿Es de tipo Fuego?", filtro: (p, r) => r ? p.tipo1 === "Fuego" || p.tipo2 === "Fuego" : p.tipo1 !== "Fuego" && p.tipo2 !== "Fuego" },
+    { texto: "¿Es de tipo Agua?", filtro: (p, r) => r ? p.tipo1 === "Agua" || p.tipo2 === "Agua" : p.tipo1 !== "Agua" && p.tipo2 !== "Agua" },
+    { texto: "¿Es de tipo Planta?", filtro: (p, r) => r ? p.tipo1 === "Planta" || p.tipo2 === "Planta" : p.tipo1 !== "Planta" && p.tipo2 !== "Planta" },
+    { texto: "¿Es de tipo Eléctrico?", filtro: (p, r) => r ? p.tipo1 === "Eléctrico" || p.tipo2 === "Eléctrico" : p.tipo1 !== "Eléctrico" && p.tipo2 !== "Eléctrico" },
+    { texto: "¿Es de tipo Psíquico?", filtro: (p, r) => r ? p.tipo1 === "Psíquico" || p.tipo2 === "Psíquico" : p.tipo1 !== "Psíquico" && p.tipo2 !== "Psíquico" },
+    { texto: "¿Es de tipo Normal?", filtro: (p, r) => r ? p.tipo1 === "Normal" || p.tipo2 === "Normal" : p.tipo1 !== "Normal" && p.tipo2 !== "Normal" },
+    { texto: "¿Es de tipo Veneno?", filtro: (p, r) => r ? p.tipo1 === "Veneno" || p.tipo2 === "Veneno" : p.tipo1 !== "Veneno" && p.tipo2 !== "Veneno" },
+    { texto: "¿Es de tipo Volador?", filtro: (p, r) => r ? p.tipo1 === "Volador" || p.tipo2 === "Volador" : p.tipo1 !== "Volador" && p.tipo2 !== "Volador" },
+    { texto: "¿Es de tipo Bicho?", filtro: (p, r) => r ? p.tipo1 === "Bicho" || p.tipo2 === "Bicho" : p.tipo1 !== "Bicho" && p.tipo2 !== "Bicho" },
+    { texto: "¿Es de tipo Tierra?", filtro: (p, r) => r ? p.tipo1 === "Tierra" || p.tipo2 === "Tierra" : p.tipo1 !== "Tierra" && p.tipo2 !== "Tierra" },
+    { texto: "¿Es de tipo Roca?", filtro: (p, r) => r ? p.tipo1 === "Roca" || p.tipo2 === "Roca" : p.tipo1 !== "Roca" && p.tipo2 !== "Roca" },
+    { texto: "¿Es de tipo Hielo?", filtro: (p, r) => r ? p.tipo1 === "Hielo" || p.tipo2 === "Hielo" : p.tipo1 !== "Hielo" && p.tipo2 !== "Hielo" },
+    { texto: "¿Es de tipo Fantasma?", filtro: (p, r) => r ? p.tipo1 === "Fantasma" || p.tipo2 === "Fantasma" : p.tipo1 !== "Fantasma" && p.tipo2 !== "Fantasma" },
+    { texto: "¿Es de tipo Lucha?", filtro: (p, r) => r ? p.tipo1 === "Lucha" || p.tipo2 === "Lucha" : p.tipo1 !== "Lucha" && p.tipo2 !== "Lucha" },
+    { texto: "¿Es de tipo Dragón?", filtro: (p, r) => r ? p.tipo1 === "Dragón" || p.tipo2 === "Dragón" : p.tipo1 !== "Dragón" && p.tipo2 !== "Dragón" },
+    { texto: "¿Es de tipo Hada?", filtro: (p, r) => r ? p.tipo1 === "Hada" || p.tipo2 === "Hada" : p.tipo1 !== "Hada" && p.tipo2 !== "Hada" },
+    { texto: "¿Es de tipo Acero?", filtro: (p, r) => r ? p.tipo1 === "Acero" || p.tipo2 === "Acero" : p.tipo1 !== "Acero" && p.tipo2 !== "Acero" },
+
+    { texto: "¿Es de color Rojo?", filtro: (p, r) => r ? p.color === "Rojo" : p.color !== "Rojo" },
+    { texto: "¿Es de color Azul?", filtro: (p, r) => r ? p.color === "Azul" : p.color !== "Azul" },
+    { texto: "¿Es de color Amarillo?", filtro: (p, r) => r ? p.color === "Amarillo" : p.color !== "Amarillo" },
+    { texto: "¿Es de color Verde?", filtro: (p, r) => r ? p.color === "Verde" : p.color !== "Verde" },
+    { texto: "¿Es de color Naranja?", filtro: (p, r) => r ? p.color === "Naranja" : p.color !== "Naranja" },
+    { texto: "¿Es de color Morado?", filtro: (p, r) => r ? p.color === "Morado" : p.color !== "Morado" },
+    { texto: "¿Es de color Rosa?", filtro: (p, r) => r ? p.color === "Rosa" : p.color !== "Rosa" },
+    { texto: "¿Es de color Blanco?", filtro: (p, r) => r ? p.color === "Blanco" : p.color !== "Blanco" },
+    { texto: "¿Es de color Marrón?", filtro: (p, r) => r ? p.color === "Marrón" : p.color !== "Marrón" },
+    { texto: "¿Es de color Gris?", filtro: (p, r) => r ? p.color === "Gris" : p.color !== "Gris" },
+    { texto: "¿Es de color Negro?", filtro: (p, r) => r ? p.color === "Negro" : p.color !== "Negro" },
+];
+
+// Variables de estado y referencias al DOM
+let candidatos = [...pokedex];
+let preguntaIndex = 0;
+
+const questionText = document.getElementById("question-text");
+const yesBtn = document.getElementById("yes-btn");
+const pokemonImg = document.getElementById("pokemon-img");
+
+
+
+// Funciones principales del juego
+function siguientePregunta() {
+    if (candidatos.length === 1) {
+        questionText.textContent = `¡Tu Pokémon es ${candidatos[0].nombre}!`;
+        yesBtn.style.display = "none";
+        pokemonImg.src = `img/${candidatos[0].nombre.toLowerCase()}.png`;
+        return;
+    }
+
+    if (candidatos.length === 0 || preguntaIndex >= preguntas.length) {
+        questionText.textContent = "¡No pude adivinarlo!";
+        yesBtn.style.display = "none";
+        return;
+    }
+
+    questionText.textContent = preguntas[preguntaIndex].texto;
+
+    let noBtn = document.getElementById("no-btn");
+    if (!noBtn) {
+        noBtn = document.createElement("button");
+        noBtn.id = "no-btn";
+        noBtn.textContent = "NO";
+        yesBtn.parentNode.appendChild(noBtn);
+    }
+
+    yesBtn.onclick = () => responder(true);
+    noBtn.onclick = () => responder(false);
+}
+
+function responder(respuesta) {
+    candidatos = candidatos.filter(p => preguntas[preguntaIndex].filtro(p, respuesta));
+    preguntaIndex++;
+    siguientePregunta();
+}
+
