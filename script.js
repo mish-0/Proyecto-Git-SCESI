@@ -1711,3 +1711,40 @@ const questionText = document.getElementById("question-text");
 const yesBtn = document.getElementById("yes-btn");
 const pokemonImg = document.getElementById("pokemon-img");
 
+
+
+// Funciones principales del juego
+function siguientePregunta() {
+    if (candidatos.length === 1) {
+        questionText.textContent = `¡Tu Pokémon es ${candidatos[0].nombre}!`;
+        yesBtn.style.display = "none";
+        pokemonImg.src = `img/${candidatos[0].nombre.toLowerCase()}.png`;
+        return;
+    }
+
+    if (candidatos.length === 0 || preguntaIndex >= preguntas.length) {
+        questionText.textContent = "¡No pude adivinarlo!";
+        yesBtn.style.display = "none";
+        return;
+    }
+
+    questionText.textContent = preguntas[preguntaIndex].texto;
+
+    let noBtn = document.getElementById("no-btn");
+    if (!noBtn) {
+        noBtn = document.createElement("button");
+        noBtn.id = "no-btn";
+        noBtn.textContent = "NO";
+        yesBtn.parentNode.appendChild(noBtn);
+    }
+
+    yesBtn.onclick = () => responder(true);
+    noBtn.onclick = () => responder(false);
+}
+
+function responder(respuesta) {
+    candidatos = candidatos.filter(p => preguntas[preguntaIndex].filtro(p, respuesta));
+    preguntaIndex++;
+    siguientePregunta();
+}
+
