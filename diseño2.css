@@ -1,0 +1,185 @@
+/* Importación de fuente moderna y gamer */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Press+Start+2P&display=swap');
+
+:root {
+    /* Paleta de colores Premium */
+    --pokedex-red: #e3350d;
+    --pokedex-dark-red: #a52a2a;
+    --screen-blue: #30a7d7;
+    --screen-dark: #232323;
+    --text-white: #ffffff;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--screen-dark);
+    overflow-x: hidden;
+}
+
+/* Header Estilo Poké-Elite */
+header {
+    background: var(--pokedex-red);
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-bottom: 8px solid var(--pokedex-dark-red);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #ffcb05; /* Amarillo Pokémon */
+    text-shadow: 3px 3px 0px #3c5aa6; /* Azul Pokémon */
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-white);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Contenedor Principal (La Pokédex) */
+#game-container {
+    background: #f0f0f0;
+    border: 12px solid var(--pokedex-red);
+    border-radius: 40px 40px 5px 40px;
+    box-shadow: var(--shadow), inset -5px -5px 15px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Layout de Juego */
+.game-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; /* Responsive friendly */
+}
+
+/* El contenido del texto (Pantalla) */
+.game-content {
+    background: var(--screen-dark);
+    padding: 30px;
+    border-radius: 15px;
+    border: 5px solid #555;
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(0,255,255,0.1);
+}
+
+#question-text {
+    color: #00ffcc; /* Estilo terminal futurista */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 80px;
+}
+
+/* Botones Estilo Arcade */
+.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+#yes-btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 0 #2e7d32;
+}
+
+#yes-btn:active {
+    box-shadow: 0 2px 0 #2e7d32;
+    transform: translateY(4px);
+}
+
+#yes-btn:hover {
+    background: #66bb6a;
+    filter: brightness(1.1);
+}
+
+/* Imagen del Pokémon con Animación */
+.game-image {
+    background: var(--screen-blue);
+    border: 8px solid #fff;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+#pokemon-img {
+    width: 80%;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+    animation: bounce 3s infinite ease-in-out;
+}
+
+/* Animación de flotado */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Footer elegante */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background: var(--screen-dark);
+    width: 100%;
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+footer p {
+    letter-spacing: 2px;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+    .game-layout {
+        flex-direction: column-reverse;
+    }
+    
+    .game-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+}
