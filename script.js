@@ -1702,3 +1702,12 @@ const preguntas = [
     { texto: "¿Es de color Gris?", filtro: (p, r) => r ? p.color === "Gris" : p.color !== "Gris" },
     { texto: "¿Es de color Negro?", filtro: (p, r) => r ? p.color === "Negro" : p.color !== "Negro" },
 ];
+
+// Variables de estado y referencias al DOM
+let candidatos = [...pokedex];
+let preguntaIndex = 0;
+
+const questionText = document.getElementById("question-text");
+const yesBtn = document.getElementById("yes-btn");
+const pokemonImg = document.getElementById("pokemon-img");
+
