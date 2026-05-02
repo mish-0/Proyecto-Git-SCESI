@@ -1748,3 +1748,11 @@ function responder(respuesta) {
     siguientePregunta();
 }
 
+
+// Inicio del juego
+yesBtn.textContent = "¡EMPEZAR!";
+yesBtn.onclick = () => {
+    candidatos = [...pokedex];
+    preguntaIndex = 0;
+    siguientePregunta();
+};
