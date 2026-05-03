@@ -125,6 +125,7 @@ header p {
 #yes-btn:hover {
     background: #66bb6a;
     filter: brightness(1.1);
+    
 }
 
 /* Imagen del Pokémon con Animación */
@@ -139,7 +140,7 @@ header p {
     justify-content: center;
     box-shadow: var(--shadow);
     overflow: hidden;
-    
+
 }
 
 #pokemon-img {
