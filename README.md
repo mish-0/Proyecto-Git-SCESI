@@ -14,6 +14,8 @@ Este es el repositorio oficial del proyecto desarrollado por el equipo PokePibbl
 
 ## Interfaz Visual (UI) con Estilo "Comic-Pokémon"
 
+![Logo PokePibbles](img/poke.png)
+
 **Diseño Moderno:** Utilizamos una paleta de colores basada en el rojo intenso (#b91c1c) y azul Pokémon (#3b4cca).
 
 **Estética de Bordes:** Se aplicó un estilo de marco negro grueso (5px solid #000) en los contenedores e imágenes para emular la estética de los cómics y el arte de la franquicia.
