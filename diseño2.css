@@ -102,7 +102,7 @@ header p {
 .button-group {
     display: flex;
     justify-content: center;
-    
+
 }
 
 #yes-btn {
@@ -121,6 +121,7 @@ header p {
 #yes-btn:active {
     box-shadow: 0 2px 0 #2e7d32;
     transform: translateY(4px);
+    
 }
 
 #yes-btn:hover {
