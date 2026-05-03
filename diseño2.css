@@ -102,6 +102,7 @@ header p {
 .button-group {
     display: flex;
     justify-content: center;
+    
 }
 
 #yes-btn {
@@ -125,7 +126,7 @@ header p {
 #yes-btn:hover {
     background: #66bb6a;
     filter: brightness(1.1);
-    
+
 
 }
 
